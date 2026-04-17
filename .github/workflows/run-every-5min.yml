@@ -2,8 +2,8 @@ name: 每5分钟执行Python脚本
 
 on:
   schedule:
-    - cron: '*/5 * * * *'     # 每5分钟执行一次
-  workflow_dispatch:          # 允许手动触发（强烈建议保留）
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
 
 jobs:
   run-python:
@@ -16,7 +16,7 @@ jobs:
       - name: 设置 Python 环境
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'     # 如果你的脚本需要更高版本可以改成 3.12 或 3.10
+          python-version: '3.11'
       
       - name: 安装依赖（如果有 requirements.txt）
         run: |
@@ -26,8 +26,3 @@ jobs:
       
       - name: 执行你的Python脚本
         run: python my_script.py
-        env:
-          # 如果你的脚本需要密钥、Token 等，在这里添加（推荐使用 Secrets）
-          # 示例：
-          # API_KEY: ${{ secrets.API_KEY }}
-          # USERNAME: ${{ secrets.USERNAME }}
