@@ -16,7 +16,7 @@ HEADERS = {
 
 # 应用映射
 APP_ID_MAP = {
-    "35899a9a-d97d-4f57-92cc-272b0acfe51c": "f4b1b025-deef-xxxx"
+    "35899a9a-d97d-4f57-92cc-272b0acfe51c": "8e20867b-e369-4134-b38d-4605f4b4e52a"
 }
 
 def load_history():
