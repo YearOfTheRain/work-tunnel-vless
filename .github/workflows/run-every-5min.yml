@@ -18,11 +18,9 @@ jobs:
         with:
           python-version: '3.11'
       
-      - name: 安装依赖（如果有 requirements.txt）
+      - name: 安装依赖
         run: |
-          if [ -f requirements.txt ]; then
-            pip install -r requirements.txt
-          fi
+          pip install -r requirements.txt
       
       - name: 执行你的Python脚本
         run: python my_script.py
